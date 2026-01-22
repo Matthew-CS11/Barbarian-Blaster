@@ -1,6 +1,6 @@
 extends Area3D
 
-var direction := Vector3.FORWARD
+var direction := Vector3.BACK
 
 @export var speed := 30.0
 

@@ -133,7 +133,9 @@ progress = 20.0
 
 [node name="Base" parent="." instance=ExtResource("3_eesb3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.17345, 0, -7.665709)
+max_health = 100
 
-[node name="TurretManager" type="Node3D" parent="."]
+[node name="TurretManager" type="Node3D" parent="." node_paths=PackedStringArray("enemy_path")]
 script = ExtResource("5_ftfrf")
 turret = ExtResource("6_u2wky")
+enemy_path = NodePath("../Path3D")
