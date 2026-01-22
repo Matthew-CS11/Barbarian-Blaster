@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://d01unib15e15u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cb20n"]
+albedo_color = Color(1, 0.90000004, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5kpma"]
+material = SubResource("StandardMaterial3D_cb20n")
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_djkev"]
+top_radius = 0.6
+bottom_radius = 0.6
+height = 0.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cb20n"]
+top_radius = 0.2
+bottom_radius = 0.38
+
+[node name="Turret" type="Node3D"]
+
+[node name="TurretBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("CylinderMesh_5kpma")
+
+[node name="TurretTop" type="MeshInstance3D" parent="TurretBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("CylinderMesh_djkev")
+
+[node name="TurretBarrel" type="MeshInstance3D" parent="TurretBase/TurretTop"]
+transform = Transform3D(0.02792158, -0.9996101, 0, 0.9996101, 0.02792158, 0, 0, 0, 1, -0.654, -0.11020583, 0)
+mesh = SubResource("CylinderMesh_cb20n")
+skeleton = NodePath("../..")
