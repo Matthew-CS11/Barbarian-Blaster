@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d01unib15e15u"]
+[gd_scene load_steps=8 format=3 uid="uid://d01unib15e15u"]
 
 [ext_resource type="Script" uid="uid://coqbxcwumauv" path="res://Turret/turret.gd" id="1_5kpma"]
 
@@ -9,12 +9,20 @@ albedo_color = Color(1, 0.90000004, 0, 1)
 material = SubResource("StandardMaterial3D_cb20n")
 height = 1.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djkev"]
+albedo_color = Color(0.95000005, 1, 0, 1)
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_djkev"]
+material = SubResource("StandardMaterial3D_djkev")
 top_radius = 0.6
 bottom_radius = 0.6
 height = 0.5
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5kpma"]
+albedo_color = Color(0.62, 0.34100002, 0, 1)
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_cb20n"]
+material = SubResource("StandardMaterial3D_5kpma")
 top_radius = 0.2
 bottom_radius = 0.38
 
@@ -29,10 +37,9 @@ mesh = SubResource("CylinderMesh_5kpma")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 mesh = SubResource("CylinderMesh_djkev")
 
-[node name="TurretBarrel" type="MeshInstance3D" parent="TurretBase/TurretTop"]
-transform = Transform3D(5.116796e-05, -0.0018318453, 0.99999833, 0.9996101, 0.02792158, 0, -0.027921533, 0.99960846, 0.0018325597, -0.029865801, -0.11020583, 0.7411227)
+[node name="TurretBarrel" type="MeshInstance3D" parent="TurretBase"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.100000024, 0.7)
 mesh = SubResource("CylinderMesh_cb20n")
-skeleton = NodePath("../..")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

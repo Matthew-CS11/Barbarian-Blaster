@@ -120,11 +120,11 @@ transform = Transform3D(-0.020627486, 0, -0.99978024, 0, 1, 0, 0.99978024, 0, -0
 progress = 5.0
 
 [node name="Enemy3" parent="Path3D" instance=ExtResource("2_5vx1e")]
-transform = Transform3D(-0.017708236, 0, -0.9998354, 0, 1, 0, 0.9998354, 0, -0.017708236, -12.714431, 0, 6.1627846)
+transform = Transform3D(-0.01770823, 0, -0.9998351, 0, 1, 0, 0.9998351, 0, -0.01770823, -12.714431, 0, 6.1627846)
 progress = 10.0
 
 [node name="Enemy4" parent="Path3D" instance=ExtResource("2_5vx1e")]
-transform = Transform3D(-0.0142460335, 0, -0.9998907, 0, 1, 0, 0.9998907, 0, -0.0142460335, -7.714971, 0, 6.243016)
+transform = Transform3D(-0.014246029, 0, -0.9998904, 0, 1, 0, 0.9998904, 0, -0.014246029, -7.714971, 0, 6.243016)
 progress = 15.0
 
 [node name="Enemy5" parent="Path3D" instance=ExtResource("2_5vx1e")]
