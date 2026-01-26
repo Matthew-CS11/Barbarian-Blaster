@@ -4,6 +4,7 @@ var projectile = preload("res://Turret/ball.tscn")
 var enemy_path : Path3D
 var target : Node3D
 @export var turret_range := 10.0
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func _physics_process(delta: float) -> void:
@@ -32,3 +33,4 @@ func _on_timer_timeout() -> void:
 		add_child(ball)
 		ball.global_position = global_position
 		ball.direction = global_transform.basis.z
+		animation_player.play("fire")

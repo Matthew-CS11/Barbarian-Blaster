@@ -6,9 +6,12 @@ class_name Enemy
 @onready var enemy: PathFollow3D = $"."
 @onready var base : Base = get_tree().get_first_node_in_group("base")
 @export var max_health := 50
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var health:int :
 	set(new_health):
+		if health > new_health:
+			animation_player.play("take_damage")	
 		health = new_health
 		if health < 1:
 			queue_free()
