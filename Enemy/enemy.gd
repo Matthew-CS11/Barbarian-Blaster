@@ -7,6 +7,8 @@ class_name Enemy
 @onready var base : Base = get_tree().get_first_node_in_group("base")
 @export var max_health := 50
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@export var money := 25
+@onready var bank = get_tree().get_first_node_in_group("bank")
 
 var health:int :
 	set(new_health):
@@ -14,6 +16,7 @@ var health:int :
 			animation_player.play("take_damage")	
 		health = new_health
 		if health < 1:
+			bank.gold += money
 			queue_free()
 		
 # Called when the node enters the scene tree for the first time.
