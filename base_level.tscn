@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d01unib15e15u" path="res://Turret/turret.tscn" id="6_u2wky"]
 [ext_resource type="Script" uid="uid://brmiqfbffbybp" path="res://bank.gd" id="8_bkkah"]
 [ext_resource type="PackedScene" uid="uid://dke6ba4ruxff3" path="res://difficulty_manager/difficulty_manager.tscn" id="9_xjg0i"]
+[ext_resource type="PackedScene" uid="uid://cqwiydufhvhtr" path="res://UI/victory_layer.tscn" id="10_ykwpl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4sal3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -154,4 +155,7 @@ label_settings = SubResource("LabelSettings_2elnx")
 
 [node name="DifficultyManager" parent="." unique_id=756387318 instance=ExtResource("9_xjg0i")]
 
+[node name="VictoryLayer" parent="." unique_id=519931431 instance=ExtResource("10_ykwpl")]
+
 [connection signal="timeout" from="Path3D/Timer" to="Path3D" method="_on_timer_timeout"]
+[connection signal="stop_spawning_enemies" from="DifficultyManager" to="Path3D" method="_on_difficulty_manager_stop_spawning_enemies"]
