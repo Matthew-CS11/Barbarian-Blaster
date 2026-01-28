@@ -7,7 +7,7 @@ class_name Enemy
 @onready var base : Base = get_tree().get_first_node_in_group("base")
 @export var max_health := 50
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@export var money := 25
+@export var money := 50
 @onready var bank = get_tree().get_first_node_in_group("bank")
 
 var health:int :

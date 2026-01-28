@@ -6,9 +6,10 @@ extends Path3D
 
 func spawn_enemy() -> void:
 	var enemy = enemy_scene.instantiate()
+	enemy.max_health = diff_manager.get_enemy_health()
 	add_child(enemy)
 	timer.wait_time = diff_manager.get_spawn_time()
-	enemy.max_health = diff_manager.get_enemy_health()
+
 
 func _on_timer_timeout() -> void:
 	spawn_enemy()
