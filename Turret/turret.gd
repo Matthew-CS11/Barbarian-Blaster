@@ -5,12 +5,15 @@ var enemy_path : Path3D
 var target : Node3D
 @export var turret_range := 10.0
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var turret_base: Node3D = $TurretBase
+@onready var cannon: Node3D = $TurretBase/TurretTop/Cannon
+
 
 
 func _physics_process(delta: float) -> void:
 	target = find_best_target()
 	if target != null:
-		look_at(target.global_position, Vector3.UP, true)
+		turret_base.look_at(target.global_position, Vector3.UP, true)
 
 
 func find_best_target() -> Enemy:
@@ -31,6 +34,6 @@ func _on_timer_timeout() -> void:
 	if target != null:
 		var ball = projectile.instantiate()
 		add_child(ball)
-		ball.global_position = global_position
-		ball.direction = global_transform.basis.z
+		ball.global_position = cannon.global_position
+		ball.direction = cannon.global_transform.basis.z
 		animation_player.play("fire")

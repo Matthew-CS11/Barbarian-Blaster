@@ -83,12 +83,14 @@ horizontal_alignment = 1
 
 [node name="HealthLabel" type="Label" parent="ColorRect/CenterContainer/PanelContainer/VBoxContainer/LabelContainer" unique_id=47912348]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "Full Health+1"
 horizontal_alignment = 1
 
 [node name="MoneyLabel" type="Label" parent="ColorRect/CenterContainer/PanelContainer/VBoxContainer/LabelContainer" unique_id=1765033135]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "Money Money Money+1"
 horizontal_alignment = 1
