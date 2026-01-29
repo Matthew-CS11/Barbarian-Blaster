@@ -157,6 +157,7 @@ label_settings = SubResource("LabelSettings_2elnx")
 [node name="DifficultyManager" parent="." unique_id=756387318 instance=ExtResource("9_xjg0i")]
 
 [node name="VictoryLayer" parent="." unique_id=519931431 instance=ExtResource("10_ykwpl")]
+visible = false
 
 [connection signal="timeout" from="Path3D/Timer" to="Path3D" method="_on_timer_timeout"]
 [connection signal="stop_spawning_enemies" from="DifficultyManager" to="Path3D" method="_on_difficulty_manager_stop_spawning_enemies"]
