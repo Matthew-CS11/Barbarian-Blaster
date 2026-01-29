@@ -32,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="ColorRect/CenterContainer" unique_id=2014919559]
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/PanelContainer" unique_id=1166320935]
@@ -42,9 +43,11 @@ alignment = 1
 layout_mode = 2
 text = "Victory"
 label_settings = SubResource("LabelSettings_fxpm7")
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer/PanelContainer/VBoxContainer" unique_id=1713766987]
 layout_mode = 2
+size_flags_vertical = 10
 alignment = 1
 
 [node name="RetryButton" type="Button" parent="ColorRect/CenterContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1208958318]
