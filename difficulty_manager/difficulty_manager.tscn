@@ -8,8 +8,8 @@ _data = [Vector2(0, 2), 0.0, -1.7500001, 0, 1, Vector2(1, 0.25), -1.7500001, 0.0
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_botnv"]
-_limits = [10.0, 150.0, 0.0, 1.0]
-_data = [Vector2(0, 10), 0.0, 140.0, 0, 1, Vector2(1, 150), 140.0, 100.0, 1, 1]
+_limits = [10.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 10), 0.0, 190.0, 0, 1, Vector2(1, 200), 190.0, 100.0, 1, 1]
 point_count = 2
 
 [node name="DifficultyManager" type="Node" unique_id=799407723]
